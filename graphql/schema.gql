@@ -94,7 +94,7 @@ input RecipeInput {
 }
 
 type Query {
-    hello: Strring!
+    hello: String!
     recommendations: TRecommendation ## get recommended friends and their retaurants after signup
     get_user: TUser ## get user info
     get_friend(id: ID!): TFriend 
