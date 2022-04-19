@@ -20,7 +20,7 @@ export class CodePipelineStack extends Stack {
     const lambdafn = new lambda.Function(this, 'lambdafnn', {
       functionName: 'my-new-pipeline-yaml',
       runtime: lambda.Runtime.NODEJS_14_X,
-      code: lambda.Code.fromInline(`exports.handler = (event)=>{ return "Hello world" }`),
+      code: lambda.Code.fromInline(`exports.handler = async(event)=>{ await return "Hello world" }`),
       handler: 'index.handler'
     })
 
